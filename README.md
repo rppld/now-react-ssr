@@ -8,4 +8,4 @@ https://now-react-ssr.now.sh/
 
 ## Credits
 
-This example is adapted from `@zeusdeux`’s [`ssr-on-zeit`](https://github.com/zeusdeux/ssr-on-zeit).
+This example is adapted from [@zeusdeux](https://github.com/zeusdeux)’s [`ssr-on-zeit`](https://github.com/zeusdeux/ssr-on-zeit).
