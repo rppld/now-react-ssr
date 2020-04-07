@@ -1,0 +1,11 @@
+.DS_Store
+npm-debug.log*
+node_modules/
+.gitignore
+.nowignore
+README*
+LICENSE
+src/*
+client.js
+server.js
+webpack.config*

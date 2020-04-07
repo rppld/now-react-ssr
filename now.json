@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "dist/server-bundle.js", "use": "@now/node" },
+    { "src": "dist/bundle.js", "use": "@now/static" },
+    { "src": "dist/bundle.js.map", "use": "@now/static" },
+    { "src": "public/*", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/sw.js", "dest": "/public/sw.js" },
+    { "src": "/style.css", "dest": "/public/style.css" },
+    { "src": "/bundle.js", "dest": "/dist/bundle.js" },
+    { "src": "/bundle.js.map", "dest": "/dist/bundle.js.map" },
+    {
+      "src": "/.*",
+      "dest": "/dist/server-bundle.js",
+      "headers": {
+        "cache-control": "s-maxage=86400",
+        "link": "</style.css>; as=style; rel=preload, </bundle.js>; as=script; rel=preload"
+      }
+    }
+  ]
+}
